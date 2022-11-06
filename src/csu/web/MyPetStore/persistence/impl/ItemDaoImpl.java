@@ -18,7 +18,8 @@ public class ItemDaoImpl implements ItemDao {
             "SELECT I.ITEMID,LISTPRICE,UNITCOST,SUPPLIER,I.PRODUCTID,NAME,DESCN,CATEGORY,STATUS,ATTR1,ATTR2,ATTR3,ATTR4,ATTR5 FROM ITEM I, PRODUCT P WHERE P.PRODUCTID = I.PRODUCTID AND I.PRODUCTID = ?";
     private static final String getItemString =
             "SELECT I.ITEMID,LISTPRICE,UNITCOST,SUPPLIER,I.PRODUCTID,NAME,DESCN,CATEGORY,STATUS,ATTR1,ATTR2,ATTR3,ATTR4,ATTR5,QTY FROM ITEM I, INVENTORY V, PRODUCT P WHERE P.PRODUCTID = I.PRODUCTID AND I.ITEMID = V.ITEMID AND I.ITEMID = ?";
-
+    private static final String getInventoryQuantityString =
+            "SELECT QTY AS value FROM INVENTORY WHERE ITEMID = ?";
     @Override
     public void updateInventoryQuantity(Map<String, Object> param) {
 
@@ -26,7 +27,18 @@ public class ItemDaoImpl implements ItemDao {
 
     @Override
     public int getInventoryQuantity(String itemId) {
-        return 0;
+        int itemStock = 0;
+        try{
+            Connection connection = DBUtil.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(getInventoryQuantityString);
+            preparedStatement.setString(1, itemId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next())
+                itemStock = resultSet.getInt("value");
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        return itemStock;
     }
 
     @Override
