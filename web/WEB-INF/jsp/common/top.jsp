@@ -27,7 +27,7 @@
 
         <div id="Menu">
             <div id="MenuContent">
-                    <a href="#"><img align="middle" name="img_cart" src="images/cart.gif" /></a>
+                    <a href="updateCart"><img align="middle" name="img_cart" src="images/cart.gif" /></a>
                     <img align="middle" name="img_cart" src="images/separator.gif" />
                     <a href="#">Sign In</a>
                     <a href="#">Sign Out</a>

@@ -26,7 +26,7 @@ public class AddItemToCartServlet extends HttpServlet {
             cart = new Cart();
 
 
-
+        // 每次刷新页面重新向add发出请求, 使得
         if (cart.containsItemId(workingItemId)) {
             cart.incrementQuantityByItemId(workingItemId);
         } else {
@@ -38,9 +38,8 @@ public class AddItemToCartServlet extends HttpServlet {
             Item item = catelogService.getItem(workingItemId);
             cart.addItem(item, isInStock);
         }
-
         session.setAttribute("cart", cart);
-
-        req.getRequestDispatcher(CART_FORM).forward(req,resp);
+        // req.getRequestDispatcher(CART_FORM).forward(req,resp);
+        resp.sendRedirect("http://localhost:8080/MyPetStore_war_exploded/updateCart");
     }
 }

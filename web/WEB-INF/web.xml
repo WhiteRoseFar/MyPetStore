@@ -54,4 +54,34 @@
         <url-pattern>/addItemToCart</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>UpdateCartServlet</servlet-name>
+        <servlet-class>csu.web.MyPetStore.web.servlet.UpdateCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateCartServlet</servlet-name>
+        <url-pattern>/updateCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RemoveCartServlet</servlet-name>
+        <servlet-class>csu.web.MyPetStore.web.servlet.RemoveCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RemoveCartServlet</servlet-name>
+        <url-pattern>/removeCart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartFormServlet</servlet-name>
+        <servlet-class>csu.web.MyPetStore.web.servlet.CartFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CartFormServlet</servlet-name>
+        <url-pattern>/cartForm</url-pattern>
+    </servlet-mapping>
+
 </web-app>
