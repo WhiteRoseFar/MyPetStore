@@ -1,8 +1,8 @@
 package csu.web.MyPetStore.web.servlet;
 
 import csu.web.MyPetStore.domain.Category;
+import csu.web.MyPetStore.domain.Item;
 import csu.web.MyPetStore.domain.Product;
-import csu.web.MyPetStore.persistence.DBUtil;
 import csu.web.MyPetStore.service.CatelogService;
 
 import javax.servlet.ServletException;
@@ -11,23 +11,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.Statement;
 import java.util.List;
 
-public class CategoryFormServlet extends HttpServlet {
-
+public class ProductFormServlet extends HttpServlet {
     private CatelogService catelogService;
-    private static final  String CATEGORY_FORM = "/WEB-INF/jsp/catalog/category.jsp";
+    private static final  String PRODUCT_FORM = "/WEB-INF/jsp/catalog/product.jsp";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         catelogService = new CatelogService();
-        String categoryId = req.getParameter("categoryId");
-        Category category = catelogService.getCategory(categoryId);
-        List<Product> productList = catelogService.getProductListByCategory(categoryId);
+        String productId = req.getParameter("productId");
+
+        Product product = catelogService.getProduct(productId);
+        List<Item> itemList = catelogService.getItemListByProduct(productId);
+
         HttpSession session = req.getSession();
-        session.setAttribute("category", category);
-        session.setAttribute("productList", productList);
-        req.getRequestDispatcher(CATEGORY_FORM).forward(req, resp);
+        session.setAttribute("product", product);
+        session.setAttribute("itemList", itemList);
+
+        req.getRequestDispatcher(PRODUCT_FORM).forward(req, resp);
     }
 }

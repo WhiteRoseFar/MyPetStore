@@ -24,4 +24,24 @@
         <url-pattern>/categoryForm</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ProductFormServlet</servlet-name>
+        <servlet-class>csu.web.MyPetStore.web.servlet.ProductFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProductFormServlet</servlet-name>
+        <url-pattern>/productForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ItemFormServlet</servlet-name>
+        <servlet-class>csu.web.MyPetStore.web.servlet.ItemFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ItemFormServlet</servlet-name>
+        <url-pattern>/itemForm</url-pattern>
+    </servlet-mapping>
+
 </web-app>

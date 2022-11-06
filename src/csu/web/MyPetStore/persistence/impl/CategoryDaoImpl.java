@@ -47,7 +47,7 @@ public class CategoryDaoImpl implements CategoryDao {
             Connection connection = DBUtil.getConnection();
             PreparedStatement preparedstatement = connection.prepareStatement(GET_CATEGORY);
             preparedstatement.setString(1, categoryId);
-            ResultSet resultSet  = preparedstatement.executeQuery(GET_CATEGORY);
+            ResultSet resultSet  = preparedstatement.executeQuery();
             if(resultSet.next()) {
                 category  = new Category();
                 category.setCategoryId(resultSet.getString(1));

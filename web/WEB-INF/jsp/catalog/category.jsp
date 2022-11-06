@@ -1,8 +1,8 @@
 <%@ include file="../common/top.jsp"%>
 
-<div id="BackLink"><stripes:link
-        beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean">
-    Return to Main Menu</stripes:link></div>
+<div id="BackLink">
+    <a href="mainForm">Return to Main Menu</a>
+</div>
 
 <div id="Catalog">
 
@@ -16,7 +16,7 @@
         <c:forEach var="product" items="${sessionScope.productList}">
             <tr>
                 <td>
-                    <a href="">${product.productId}</a>
+                    <a href="productForm?productId=${product.productId}">${product.productId}</a>
                 </td>
                 <td>${product.name}</td>
             </tr>

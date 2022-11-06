@@ -8,16 +8,18 @@ public class DBUtil {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "123456";
 
-    public static Connection getConnection() {
+    public static Connection getConnection(){
         Connection connection = null;
         try{
             Class.forName(DRIVER);
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        } catch (Exception e){
+            connection= DriverManager.getConnection(URL,USERNAME,PASSWORD);
+
+        }catch (Exception e){
             e.printStackTrace();
         }
         return connection;
     }
+
 
     public static void closeConnection(Connection connection) {
         if(connection != null) {
@@ -59,7 +61,7 @@ public class DBUtil {
         }
     }
 
-//    public static void main(String[] args) {
-//        getConnection();
-//    }
+    public static void main(String[] args) {
+        getConnection();
+    }
 }

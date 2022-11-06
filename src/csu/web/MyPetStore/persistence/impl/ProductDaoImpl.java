@@ -32,9 +32,9 @@ public class ProductDaoImpl implements ProductDao {
             while(resultSet.next()) {
                 Product product  = new Product();
                 product.setProductId(resultSet.getString(1));
-                product.setName(resultSet.getString(3));
-                product.setDescription(resultSet.getString(4));
-                product.setCategoryId(resultSet.getString(2));
+                product.setName(resultSet.getString(2));
+                product.setDescription(resultSet.getString(3));
+                product.setCategoryId(resultSet.getString(4));
                 productList.add(product);
             }
             DBUtil.closeResultSet(resultSet);
@@ -57,9 +57,9 @@ public class ProductDaoImpl implements ProductDao {
             while(resultSet.next()) {
                 product  = new Product();
                 product.setProductId(resultSet.getString(1));
-                product.setName(resultSet.getString(3));
-                product.setDescription(resultSet.getString(4));
-                product.setCategoryId(resultSet.getString(2));
+                product.setName(resultSet.getString(2));
+                product.setDescription(resultSet.getString(3));
+                product.setCategoryId(resultSet.getString(4));
             }
             DBUtil.closeResultSet(resultSet);
             DBUtil.closePreparedStatement(preparedstatement);
