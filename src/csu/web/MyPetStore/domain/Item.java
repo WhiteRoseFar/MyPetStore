@@ -7,6 +7,7 @@ public class Item implements Serializable {
     private static final long serialVersionUID = -2159121673445254631L;
 
     private String itemId;
+    private String name;
     private String productId;
     private BigDecimal listPrice;
     private BigDecimal unitCost;
@@ -24,6 +25,9 @@ public class Item implements Serializable {
         return itemId;
     }
 
+    public String getName() {
+        return name;
+    }
     public void setItemId(String itemId) {
         this.itemId = itemId.trim();
     }

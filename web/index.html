@@ -1,22 +1,93 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--&lt;!&ndash;    <meta name = "viewport"&ndash;&gt;-->
+<!--&lt;!&ndash;          content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta http-equiv="X-UA-Compatible" content = "ie=edge">&ndash;&gt;-->
+<!--    <title>MyPetStore</title>-->
+<!--    <link rel="StyleSheet" href="css/MyPetStore.css" type="text/css" media="screen"/>-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="Content">-->
+<!--    <h2>Welcome to JPetStore 6</h2>-->
+
+<!--    <p><a href="mainForm">Enter the Store</a></p>-->
+
+<!--    <p><sub>Copyright CSU. </sub></p>-->
+
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
 <!doctype html>
 <html lang="en">
+
+<style>
+    .bodyground
+    {
+        background-image: url("images/bodybackground1.png");
+        background-size: cover;
+    }
+    .text-left {
+        text-align: left !important;
+    }
+
+    .pt-12 {
+        padding-top: 50px !important;
+    }
+    .pl-2 {
+        padding-left: 8px !important;
+    }
+    .mt-12 {
+        margin-top: 0px !important;
+    }
+
+    .ml-48-mt-5 {
+        margin-left: 480px;
+        margin-top: 50px
+    }
+    .col-11 {
+        width: 91.66666663%;
+    }
+    .setToCenter {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+    }
+</style>
 <head>
     <meta charset="UTF-8">
-<!--    <meta name = "viewport"-->
-<!--          content = "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-<!--    <meta http-equiv="X-UA-Compatible" content = "ie=edge">-->
-    <title>MyPetStore</title>
-    <link rel="StyleSheet" href="css/MyPetStore.css" type="text/css" media="screen"/>
-    <title>Document</title>
 </head>
-<body>
-<div id="Content">
-    <h2>Welcome to JPetStore 6</h2>
 
-    <p><a href="mainForm">Enter the Store</a></p>
+<body class="bodyground">
+<div>
+    <img src="images/title.png" style="margin:auto; display: block">
+</div>
 
-    <p><sub>Copyright CSU. </sub></p>
+<div id="mainbody" style="display: flex; justify-content: space-between">
+<!--    <div id="images0" style="width: 500px; height: 600px; background-image: url(images/bodybackground.png); background-size: cover"></div>-->
+<!--    <div id="images1" style="width: 500px; height: 600px; background-image: url(images/bodybackground.png); background-size: cover"></div>-->
+<!--    <div id="images2" style="width: 500px; height: 600px; background-image: url(images/bodybackground.png); background-size: cover"></div>-->
+    <div id="test1" class="mt-12 pl-2 text-left col 11 ml-48-mt-5">
+        <h1 style="font-weight: 600 !important; font-size: 50px">
+            Let's start from here.
+        </h1>
+        <p class="f1-mktg col-11 col-lg-10 text-normal color-fg-muted mr-lg-n4 mb-3 mb-md-4 mb-md-7 position-relative z-1" style="font-size: 30px">
+            The range of products that are offered by a pet store comprise of a wide range of pets such as dogs, fish, cats, birds etc....
+        </p>
+    </div>
 
+</div>
+
+
+<div style="margin-left: 480px; margin-top: 0px">
+    <a href="mainForm"><img src="images/button.png" ></a>
 </div>
 </body>
 </html>

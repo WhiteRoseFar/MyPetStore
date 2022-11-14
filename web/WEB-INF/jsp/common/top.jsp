@@ -4,6 +4,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
 <!DOCTYPE html>
 
 <html>
@@ -15,9 +18,25 @@
 
 </head>
 
-<body>
+<style>
+    html{
+        overflow-x: hidden;
 
-    <div id="Header">
+    }
+    .bodyground
+    {
+        background-image: url("../../../images/thebackground.png");
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body class="bodyground">
+
+    <div id="Header" style="width: 100%">
 
         <div id="Logo">
             <div id="LogoContent">

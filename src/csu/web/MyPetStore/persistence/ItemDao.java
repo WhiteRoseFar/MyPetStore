@@ -5,7 +5,7 @@ import csu.web.MyPetStore.domain.Item;
 import java.util.List;
 import java.util.Map;
 
-public interface ItemDao{
+public interface ItemDao {
 
     void updateInventoryQuantity(Map<String, Object> param);
 

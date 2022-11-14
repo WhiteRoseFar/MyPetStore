@@ -1,3 +1,9 @@
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
 body {
     margin: 0ex 10ex 0ex 10ex;
     padding: 0ex;
@@ -5,7 +11,10 @@ body {
     font-size: 2ex;
     color: #333;
     background-color: #444;
+    height: 100%;
+    overflow-x: hidden;
 }
+
 
 pre {
     font-family: "Courier New", Courier, mono;
@@ -271,8 +280,8 @@ body>#Banner {
 #MainImage {
     float: left;
     background:inherit;
-    text-align:center;
-    width: 50%;
+    /*text-align:center;*/
+    /*width: 50%;*/
 }
 
 #Catalog {
